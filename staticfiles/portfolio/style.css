@@ -1,0 +1,110 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #e4e4e4;
+    overflow: hidden;
+}
+
+/* Hero Section Styling */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('/static/portfolio/bg.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.2);
+    animation: fadeInHero 3s ease-out forwards;
+}
+
+/* Hero Content */
+.hero-content {
+    z-index: 2;
+    color: rgb(238, 230, 230);
+}
+
+/* Text Outline and Glow Effect for Hero Heading */
+.hero-heading {
+    font-size: 4em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #9b9b9b; /* Main text color */
+    text-shadow:
+        4px 4px 5px rgba(0, 0, 0, 0.9),  /* Outer shadow for outline */
+        -4px -4px 5px rgba(0, 0, 0, 0.9), /* Outer shadow for outline */
+        4px -4px 5px rgba(0, 0, 0, 0.9),  /* Outer shadow for outline */
+        -4px 4px 5px rgba(0, 0, 0, 0.9),  /* Outer shadow for outline */
+        0 0 20px #353433,                  /* Inner glow */
+        0 0 40px #3e3d3c;                  /* Stronger glow effect */
+}
+
+/* Fade In Animations */
+@keyframes fadeInHero {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Scrolling Section Styling */
+.scroll-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+    text-align: center;
+    position: relative;
+}
+
+.scroll-content {
+    color: #ccc;
+    font-size: 1.5em;
+    opacity: 0;
+    animation: fadeInUp 2s ease 2.5s forwards;
+}
+
+/* Buttons and Links */
+.btn-about {
+    background-color: #ff6a00;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 0 15px rgba(255, 106, 0, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-about:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(255, 106, 0, 1);
+}
+
+/* Particle Effect Background */
+.particles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background: url('/static/portfolio/particles.png') repeat;
+    animation: moveParticles 10s linear infinite;
+}
+
+/* Particle Animation for Background */
+@keyframes moveParticles {
+    0% { background-position: 0 0; }
+    100% { background-position: 1000px 1000px; }
+}
