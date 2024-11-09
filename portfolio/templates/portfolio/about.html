@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio/about-style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'contact' %}">Contact</a>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-container">
+        <div class="profile-section">
+            <!-- Profile Picture -->
+            <img src="{% static 'portfolio/profile.jpg' %}" alt="Profile Picture" class="profile-pic">
+            <h2>A.Charan</h2>
+            <p class="bio">A passionate student of Artificial Intelligence and Data Science branch at K.L University.</p>
+        </div>
+
+        <div class="resume">
+            <!-- Skills Section -->
+            <div class="resume-section skills">
+                <h3>Skills</h3>
+                <ul>
+                    <li>Django</li>
+                    <li>Java</li>
+                    <li>Android App Development</li>
+                    <li>Python</li>
+                    <li>Web Development</li>
+                </ul>
+            </div>
+
+            <!-- Experience Section -->
+            <div class="resume-section experience">
+                <h3>Experience</h3>
+                <p><strong>Fresher</strong>(Student) </p>
+            </div>
+
+            <!-- Education Section -->
+            <div class="resume-section education">
+                <h3>Education</h3>
+                <p><strong>Bachelor's in AI&DS </strong> - KL University (2023 - 2027)</p>
+                <p><strong>Intermediate in MPC</strong> -  Narayana (2022 - 2023)</p>
+            </div>
+
+            <!-- Projects Section -->
+            <div class="resume-section projects">
+                <h3>Projects</h3>
+                <ul>
+                    <li><a href="#">Project One - BalanceApp</a></li>
+                    <li><a href="#">Project Two - Portfolio Website</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+</html>

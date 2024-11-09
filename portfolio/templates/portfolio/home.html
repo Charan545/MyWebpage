@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to MyPage</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio/style.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-heading">Welcome to my Webpage!</h1>
+            <h2 id="typed-output"></h2>
+            <a href="{% url 'about' %}" class="btn-about">Something Awaits....</a>
+        </div>
+    </header>
+
+    <!-- Scrolling Section with Interactive Animation -->
+    <section class="scroll-section">
+        <div class="scroll-content">
+            <p>Scroll down to discover my world.</p>
+        </div>
+    </section>
+
+    <!-- Particle Effect Background -->
+    <div class="particles-container"></div>
+
+    <script>
+        // Typewriter Animation for Intro
+        var options = {
+            strings: ["I am a Developer.", "I build innovative websites.", "Gotham is calling..."],
+            typeSpeed: 150,
+            backSpeed: 60,
+            backDelay: 1000,
+            startDelay: 500,
+            loop: true
+        };
+        var typed = new Typed("#typed-output", options);
+    </script>
+</body>
+</html>
